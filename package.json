@@ -1,0 +1,57 @@
+{
+  "name": "@walidoux/prettier-config",
+  "version": "1.0.0",
+  "description": "Walidoux's Prettier config.",
+  "author": "Walid Korchi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/walidoux/prettier-config"
+  },
+  "homepage": "https://github.com/walidoux/prettier-config/#readme",
+  "bugs": {
+    "email": "contact@walidkorchi.com",
+    "url": "https://github.com/Walidoux/prettier-config/issues"
+  },
+  "keywords": [
+    "prettier",
+    "config"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "prettier": "./index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "nano-staged"
+    }
+  },
+  "nano-staged": {
+    "**/*.js": [
+      "eslint --fix",
+      "prettier --ignore-path .eslintignore --write"
+    ],
+    "**/*.{json,md,yml}": [
+      "prettier --ignore-path .eslintignore --write"
+    ]
+  },
+  "scripts": {
+    "lint:eslint": "eslint '**/*.js' --fix",
+    "lint:prettier": "prettier '**/*.{js,json,md,yml}' --ignore-path .eslintignore --write --loglevel silent",
+    "lint-all": "npm-run-all lint:*"
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "8.0.1",
+    "nano-staged": "^0.8.0",
+    "np": "^7.6.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1"
+  },
+  "peerDependencies": {
+    "prettier": ">=2.7.1"
+  }
+}

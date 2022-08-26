@@ -1,0 +1,7 @@
+module.exports = {
+  trailingComma: 'none',
+  jsxSingleQuote: true,
+  semi: false,
+  singleQuote: true,
+  bracketSameLine: true
+}
