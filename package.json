@@ -39,7 +39,8 @@
   "scripts": {
     "lint:eslint": "eslint '**/*.js' --fix",
     "lint:prettier": "prettier '**/*.{js,json,md,yml}' --ignore-path .eslintignore --write --loglevel silent",
-    "lint-all": "npm-run-all lint:*"
+    "lint-all": "npm-run-all lint:*",
+    "release": "npm login && npm publish"
   },
   "devDependencies": {
     "eslint": "^8.22.0",
