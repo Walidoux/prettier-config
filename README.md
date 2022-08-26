@@ -17,7 +17,5 @@ NPM  ➜  npm install --save-dev prettier @walidoux/prettier-config
 Add it to your project inside `package.json`'s file.
 
 ```json
-{
-  "prettier": "@marcbouchenoire/prettier-config"
-}
+{ "prettier": "@walidoux/prettier-config" }
 ```
